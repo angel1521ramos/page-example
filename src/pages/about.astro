@@ -1,0 +1,35 @@
+---
+import Layout from "../components/Layout.astro";
+const Title = "Acerca de nosotros"
+---
+
+<Layout title={Title}>
+    <h1><b>{Title}</b></h1>
+    <h3><b>Introducción:</b></h3>
+
+    <p>
+        Bienvenidos a [Nombre del Blog], tu fuente de información confiable y
+        entretenimiento sobre [Tema Principal del Blog]. Nos complace que hayas
+        encontrado tu camino hasta aquí.
+    </p>
+    <h3><b>Nuestra Historia:</b></h3>
+    <p>
+        [Nombre del Blog] fue fundado en [Año de Fundación] por [Nombre del
+        Fundador o Fundadores]. Desde entonces, nos hemos dedicado a
+        proporcionar a nuestros lectores contenido valioso y actualizado sobre
+        [Tema Principal del Blog]. Nuestra pasión por [Tema Principal del Blog]
+        nos ha impulsado a compartir nuestro conocimiento y experiencia con una
+        audiencia global.
+    </p>
+</Layout>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+    p {
+        text-indent: 50px;
+        text-align: justify;
+        letter-spacing: 3px;
+    }
+</style>

@@ -1,36 +1,13 @@
 ---
-const title = "Mi primera pagina";
-const clasTitle = "title";
-
-const api = await fetch("https://jsonplaceholder.typicode.com/posts");
-const posts = await api.json();
-
-import Card from '../components/Card.astro'
+import Layout from "../components/Layout.astro";
 ---
 
-<h1 class={clasTitle}>{title} - {6 * 2}</h1>
-<div class="grid-container">
-  {
-    posts.map((x) => (
-      <Card userId={x.userId} title={x.title} body={x.body}/>
-    ))
-  }
-
-</div>
-
+<Layout>
+  <h1><b>MY BLOG</b></h1>
+  <p>Welcome to the blog of</p>
+</Layout>
 <style>
-  body {
-    background: #202020;
-    color: white;
+  h1 {
+    text-align: center;
   }
-  .title {
-    color: crimson;
-  }
-  .grid-container {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: auto auto auto;
-  background-color: #202020;
-  padding: 10px;
-}
 </style>

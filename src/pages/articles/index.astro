@@ -1,0 +1,30 @@
+---
+import Layout from "../../components/Layout.astro";
+const Title = "Menu de tutoriales";
+const posts = await Astro.glob("./posts/*.md");
+---
+
+<Layout title={Title}>
+    <h1>{Title}</h1>
+    <ul>
+        {
+            posts.map((x) => {
+                return (
+                    <li>
+                        <h2>
+                            <a href={x.url}>{x.frontmatter.title}</a>
+                        </h2>
+                        <h5>{x.frontmatter.author}</h5>
+                    </li>
+                );
+            })
+        }
+    </ul>
+    <style>
+        h1,
+        h2,
+        h5 {
+            text-align: center;
+        }
+    </style>
+</Layout>
